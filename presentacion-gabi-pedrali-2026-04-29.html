@@ -1,0 +1,1816 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Servicios 360 — Presentación Institucional</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@200;300;400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --white: #FFFFFF;
+    --paper: #FBFBFD;
+    --gray-50: #F5F5F7;
+    --gray-100: #E8E8ED;
+    --gray-200: #D2D2D7;
+    --gray-400: #86868B;
+    --gray-600: #515154;
+    --black: #0A0A0A;
+    --ink: #1D1D1F;
+    --blue: #0066CC;
+    --blue-deep: #003D7A;
+    --orange: #FF6B1A;
+    --orange-soft: #FFE5D6;
+    --green: #34A853;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    font-family: 'Geist', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--white);
+    color: var(--ink);
+    line-height: 1.47;
+    overflow-x: hidden;
+    font-feature-settings: 'ss01', 'cv01';
+  }
+
+  /* ─── Sections ─── */
+  section {
+    padding: clamp(120px, 18vh, 220px) clamp(24px, 6vw, 80px);
+    position: relative;
+  }
+
+  .container {
+    max-width: 1180px;
+    margin: 0 auto;
+  }
+
+  .container-narrow {
+    max-width: 920px;
+    margin: 0 auto;
+  }
+
+  /* ─── Typography ─── */
+  .display {
+    font-weight: 300;
+    letter-spacing: -0.045em;
+    line-height: 1.05;
+  }
+
+  .display-tight {
+    font-weight: 600;
+    letter-spacing: -0.04em;
+    line-height: 1;
+  }
+
+  .eyebrow {
+    font-family: 'Geist Mono', monospace;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--blue);
+    font-weight: 500;
+    margin-bottom: 28px;
+  }
+
+  .accent-orange { color: var(--orange); }
+  .accent-blue { color: var(--blue); }
+  .text-mute { color: var(--gray-400); }
+
+  /* ─── HERO ─── */
+  .hero {
+    min-height: 100vh;
+    background: var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding-top: 120px;
+  }
+
+  .hero .eyebrow {
+    margin-bottom: 56px;
+  }
+
+  .hero-title {
+    font-size: clamp(3rem, 8.5vw, 9rem);
+    max-width: 16ch;
+    margin: 0 auto;
+  }
+
+  .hero-title .grad {
+    background: linear-gradient(135deg, var(--blue) 0%, var(--orange) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .hero-sub {
+    margin-top: 48px;
+    font-size: clamp(1.1rem, 1.6vw, 1.35rem);
+    color: var(--gray-600);
+    font-weight: 400;
+    max-width: 56ch;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.5;
+  }
+
+  .hero-meta {
+    margin-top: 96px;
+    display: flex;
+    justify-content: center;
+    gap: 64px;
+    flex-wrap: wrap;
+    color: var(--gray-400);
+    font-size: 0.85rem;
+  }
+
+  .hero-meta .item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .hero-meta .item .lbl {
+    font-family: 'Geist Mono', monospace;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+  }
+
+  .hero-meta .item .val {
+    color: var(--ink);
+    font-weight: 500;
+    font-size: 0.95rem;
+  }
+
+  /* ─── Statement (Apple keynote style — one big idea) ─── */
+  .statement {
+    background: var(--gray-50);
+    text-align: center;
+  }
+
+  .statement-text {
+    font-size: clamp(2.4rem, 5.5vw, 5rem);
+    font-weight: 400;
+    letter-spacing: -0.04em;
+    line-height: 1.08;
+    max-width: 22ch;
+    margin: 0 auto;
+  }
+
+  .statement-text .em {
+    color: var(--blue);
+    font-weight: 500;
+  }
+
+  /* ─── Section header ─── */
+  .section-header {
+    text-align: center;
+    margin-bottom: 120px;
+  }
+
+  .section-header h2 {
+    font-size: clamp(2.4rem, 5vw, 4.5rem);
+    font-weight: 400;
+    letter-spacing: -0.04em;
+    line-height: 1.05;
+    max-width: 20ch;
+    margin: 0 auto;
+  }
+
+  .section-header h2 .em {
+    color: var(--orange);
+    font-weight: 500;
+  }
+
+  .section-header p {
+    margin-top: 24px;
+    color: var(--gray-600);
+    font-size: 1.1rem;
+    max-width: 56ch;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* ─── BIG NUMBER GRID ─── */
+  .impact-num-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--gray-100);
+    border: 1px solid var(--gray-100);
+    border-radius: 28px;
+    overflow: hidden;
+    margin-bottom: 96px;
+  }
+
+  .num-cell {
+    background: var(--white);
+    padding: 56px 40px;
+    text-align: center;
+    transition: background 0.4s ease;
+    position: relative;
+  }
+
+  .num-cell:hover { background: var(--gray-50); }
+
+  .num-cell .big {
+    font-size: clamp(3.2rem, 6vw, 5.2rem);
+    font-weight: 200;
+    letter-spacing: -0.05em;
+    line-height: 1;
+    color: var(--ink);
+    margin-bottom: 16px;
+  }
+
+  .num-cell .big .unit {
+    font-size: 0.4em;
+    color: var(--gray-400);
+    margin-left: 4px;
+    font-weight: 300;
+  }
+
+  .num-cell .big.blue { color: var(--blue); }
+  .num-cell .big.orange { color: var(--orange); }
+
+  .num-cell .label {
+    color: var(--gray-600);
+    font-size: 0.95rem;
+    line-height: 1.4;
+    max-width: 24ch;
+    margin: 0 auto;
+  }
+
+  .num-cell .micro {
+    margin-top: 12px;
+    font-family: 'Geist Mono', monospace;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    color: var(--gray-400);
+  }
+
+  /* ─── CHARTS ─── */
+  .chart-block {
+    background: var(--white);
+    border: 1px solid var(--gray-100);
+    border-radius: 28px;
+    padding: 56px;
+    margin-bottom: 32px;
+  }
+
+  .chart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin-bottom: 48px;
+    gap: 32px;
+    flex-wrap: wrap;
+  }
+
+  .chart-title {
+    font-size: 1.5rem;
+    font-weight: 500;
+    letter-spacing: -0.02em;
+    margin-bottom: 6px;
+  }
+
+  .chart-sub {
+    color: var(--gray-400);
+    font-size: 0.92rem;
+  }
+
+  .chart-legend {
+    display: flex;
+    gap: 24px;
+    font-size: 0.85rem;
+    color: var(--gray-600);
+  }
+
+  .legend-dot {
+    display: inline-block;
+    width: 10px; height: 10px;
+    border-radius: 50%;
+    margin-right: 8px;
+    vertical-align: middle;
+  }
+
+  /* Line chart */
+  .line-chart {
+    width: 100%;
+    height: 360px;
+  }
+
+  .line-chart .grid-line {
+    stroke: var(--gray-100);
+    stroke-width: 1;
+  }
+
+  .line-chart .axis-text {
+    fill: var(--gray-400);
+    font-size: 11px;
+    font-family: 'Geist Mono', monospace;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+
+  .line-chart .line-path {
+    fill: none;
+    stroke: var(--blue);
+    stroke-width: 2.5;
+    stroke-linecap: round;
+    stroke-dasharray: 2000;
+    stroke-dashoffset: 2000;
+    transition: stroke-dashoffset 2.5s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .line-chart .area-path {
+    fill: url(#areaGrad);
+    opacity: 0;
+    transition: opacity 1.2s ease 1.2s;
+  }
+
+  .line-chart.in .line-path { stroke-dashoffset: 0; }
+  .line-chart.in .area-path { opacity: 1; }
+
+  .line-chart .point {
+    fill: var(--white);
+    stroke: var(--blue);
+    stroke-width: 2.5;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+  .line-chart.in .point { opacity: 1; }
+  .line-chart.in .point:nth-child(odd) { transition-delay: 1.5s; }
+  .line-chart.in .point:nth-child(even) { transition-delay: 1.8s; }
+
+  .line-chart .point-label {
+    fill: var(--ink);
+    font-size: 13px;
+    font-weight: 500;
+    font-family: 'Geist Mono', monospace;
+    opacity: 0;
+    transition: opacity 0.6s ease 2s;
+  }
+  .line-chart.in .point-label { opacity: 1; }
+
+  /* Bar chart (horizontal) */
+  .bar-chart-h {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+  }
+
+  .bar-row {
+    display: grid;
+    grid-template-columns: 180px 1fr 80px;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .bar-row .bar-label {
+    font-size: 0.95rem;
+    color: var(--ink);
+    font-weight: 500;
+  }
+
+  .bar-row .bar-label .sub {
+    display: block;
+    font-size: 0.78rem;
+    color: var(--gray-400);
+    font-weight: 400;
+    margin-top: 2px;
+  }
+
+  .bar-track {
+    height: 14px;
+    background: var(--gray-50);
+    border-radius: 100px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .bar-fill {
+    height: 100%;
+    width: 0;
+    border-radius: 100px;
+    transition: width 1.6s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .bar-fill.blue { background: linear-gradient(90deg, var(--blue) 0%, #2D86E8 100%); }
+  .bar-fill.orange { background: linear-gradient(90deg, var(--orange) 0%, #FF8E54 100%); }
+  .bar-fill.gray { background: var(--gray-200); }
+
+  .bar-value {
+    text-align: right;
+    font-family: 'Geist Mono', monospace;
+    font-weight: 500;
+    color: var(--ink);
+    font-size: 0.95rem;
+  }
+
+  /* Vertical bars */
+  .bar-chart-v {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 16px;
+    height: 280px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid var(--gray-100);
+    position: relative;
+  }
+
+  .vbar {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    position: relative;
+    height: 100%;
+    justify-content: end;
+  }
+
+  .vbar .vbar-fill {
+    width: 100%;
+    max-width: 56px;
+    background: var(--ink);
+    border-radius: 6px 6px 0 0;
+    height: 0;
+    transition: height 1.6s cubic-bezier(0.16, 1, 0.3, 1);
+    position: relative;
+  }
+
+  .vbar .vbar-num {
+    position: absolute;
+    top: -28px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Geist Mono', monospace;
+    font-size: 0.85rem;
+    font-weight: 500;
+  }
+
+  .vbar .vbar-label {
+    position: absolute;
+    bottom: -32px;
+    font-family: 'Geist Mono', monospace;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--gray-400);
+    white-space: nowrap;
+  }
+
+  .vbar:nth-child(1) .vbar-fill { background: linear-gradient(180deg, #2D86E8, var(--blue)); }
+  .vbar:nth-child(2) .vbar-fill { background: linear-gradient(180deg, #4D9BEE, #2D86E8); }
+  .vbar:nth-child(3) .vbar-fill { background: linear-gradient(180deg, #6FB0F4, #4D9BEE); }
+  .vbar:nth-child(4) .vbar-fill { background: linear-gradient(180deg, #91C5FA, #6FB0F4); }
+
+  /* Map / Geographic timeline */
+  .geo-timeline {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    position: relative;
+    padding: 32px 0;
+  }
+
+  .geo-timeline::before {
+    content: '';
+    position: absolute;
+    top: 56px;
+    left: 12.5%;
+    right: 12.5%;
+    height: 1px;
+    background: var(--gray-200);
+  }
+
+  .geo-step {
+    text-align: center;
+    position: relative;
+  }
+
+  .geo-step .dot {
+    width: 18px; height: 18px;
+    margin: 0 auto 16px;
+    border-radius: 50%;
+    border: 2px solid var(--gray-200);
+    background: var(--white);
+    position: relative;
+    z-index: 2;
+    transition: all 0.5s ease;
+  }
+
+  .geo-step.active .dot {
+    background: var(--orange);
+    border-color: var(--orange);
+    box-shadow: 0 0 0 6px rgba(255, 107, 26, 0.12);
+  }
+
+  .geo-step .month {
+    font-family: 'Geist Mono', monospace;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    color: var(--gray-400);
+    margin-bottom: 8px;
+  }
+
+  .geo-step .place {
+    font-weight: 500;
+    font-size: 1rem;
+    color: var(--ink);
+    margin-bottom: 4px;
+  }
+
+  .geo-step .place-sub {
+    font-size: 0.78rem;
+    color: var(--gray-400);
+  }
+
+  /* ─── Reveal ─── */
+  .reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .reveal.in { opacity: 1; transform: translateY(0); }
+
+  .stagger > * {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .stagger.in > *:nth-child(1) { transition-delay: 0.05s; opacity: 1; transform: translateY(0); }
+  .stagger.in > *:nth-child(2) { transition-delay: 0.15s; opacity: 1; transform: translateY(0); }
+  .stagger.in > *:nth-child(3) { transition-delay: 0.25s; opacity: 1; transform: translateY(0); }
+  .stagger.in > *:nth-child(4) { transition-delay: 0.35s; opacity: 1; transform: translateY(0); }
+  .stagger.in > *:nth-child(5) { transition-delay: 0.45s; opacity: 1; transform: translateY(0); }
+  .stagger.in > *:nth-child(6) { transition-delay: 0.55s; opacity: 1; transform: translateY(0); }
+
+  /* ─── Platform updates ─── */
+  .platform {
+    background: var(--gray-50);
+  }
+
+  .platform-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .module {
+    background: var(--white);
+    padding: 40px 36px;
+    border-radius: 22px;
+    transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.5s ease;
+    position: relative;
+  }
+  .module:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 24px 48px -12px rgba(0, 0, 0, 0.08);
+  }
+
+  .module .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(52, 168, 83, 0.1);
+    color: var(--green);
+    padding: 6px 12px;
+    border-radius: 100px;
+    font-family: 'Geist Mono', monospace;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    font-weight: 500;
+    margin-bottom: 20px;
+  }
+
+  .module .badge::before {
+    content: '';
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--green);
+    animation: pulse 2s ease infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.4; transform: scale(0.85); }
+  }
+
+  .module h3 {
+    font-size: 1.45rem;
+    font-weight: 500;
+    letter-spacing: -0.02em;
+    margin-bottom: 12px;
+    line-height: 1.2;
+  }
+
+  .module p {
+    color: var(--gray-600);
+    font-size: 0.95rem;
+    line-height: 1.55;
+  }
+
+  .module .num-corner {
+    position: absolute;
+    top: 32px;
+    right: 36px;
+    font-family: 'Geist Mono', monospace;
+    font-size: 0.65rem;
+    color: var(--gray-200);
+    letter-spacing: 0.18em;
+  }
+
+  /* ─── Logic ─── */
+  .logic-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+
+  .flow-card {
+    background: var(--white);
+    border: 1px solid var(--gray-100);
+    padding: 48px 44px;
+    border-radius: 28px;
+    position: relative;
+    transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease;
+  }
+  .flow-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--gray-200);
+  }
+
+  .flow-tag {
+    font-family: 'Geist Mono', monospace;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    letter-spacing: 0.18em;
+    margin-bottom: 16px;
+    font-weight: 500;
+  }
+  .flow-card.simple .flow-tag { color: var(--blue); }
+  .flow-card.complex .flow-tag { color: var(--orange); }
+
+  .flow-card h4 {
+    font-size: 1.7rem;
+    font-weight: 500;
+    margin-bottom: 16px;
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+  }
+
+  .flow-card .desc {
+    color: var(--gray-600);
+    margin-bottom: 32px;
+    font-size: 0.98rem;
+  }
+
+  .flow-list {
+    list-style: none;
+    border-top: 1px solid var(--gray-100);
+  }
+  .flow-list li {
+    padding: 16px 0;
+    border-bottom: 1px solid var(--gray-100);
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    font-size: 0.95rem;
+  }
+  .flow-list li:last-child { border-bottom: none; }
+
+  .flow-list .check {
+    flex-shrink: 0;
+    width: 20px; height: 20px;
+    border-radius: 50%;
+    display: grid; place-items: center;
+    background: var(--gray-50);
+    font-size: 0.7rem;
+  }
+  .flow-card.simple .flow-list .check { background: rgba(0, 102, 204, 0.1); color: var(--blue); }
+  .flow-card.complex .flow-list .check { background: rgba(255, 107, 26, 0.1); color: var(--orange); }
+
+  /* ─── Investment ─── */
+  .investment {
+    background: var(--gray-50);
+  }
+
+  .invest-headline {
+    text-align: center;
+    margin-bottom: 80px;
+  }
+
+  .invest-headline .total-num {
+    font-size: clamp(5rem, 12vw, 11rem);
+    font-weight: 200;
+    letter-spacing: -0.06em;
+    line-height: 0.9;
+    margin-bottom: 24px;
+  }
+
+  .invest-headline .total-num .currency {
+    font-size: 0.45em;
+    color: var(--gray-400);
+    font-weight: 300;
+    margin-right: 12px;
+    vertical-align: top;
+    margin-top: 0.4em;
+    display: inline-block;
+  }
+
+  .invest-headline .sub {
+    color: var(--gray-600);
+    font-size: 1.15rem;
+    max-width: 50ch;
+    margin: 0 auto;
+  }
+
+  .breakdown {
+    background: var(--white);
+    border-radius: 28px;
+    overflow: hidden;
+    border: 1px solid var(--gray-100);
+  }
+
+  .invest-row {
+    display: grid;
+    grid-template-columns: 60px 1.4fr 1.6fr 120px;
+    gap: 24px;
+    padding: 24px 32px;
+    align-items: center;
+    border-bottom: 1px solid var(--gray-100);
+    transition: background 0.3s ease;
+  }
+  .invest-row:last-child { border-bottom: none; }
+  .invest-row:hover { background: var(--paper); }
+
+  .invest-row .idx {
+    font-family: 'Geist Mono', monospace;
+    color: var(--gray-400);
+    font-size: 0.78rem;
+  }
+
+  .invest-row .item {
+    font-size: 1.05rem;
+    color: var(--ink);
+    font-weight: 500;
+    letter-spacing: -0.01em;
+  }
+
+  .invest-row .desc {
+    color: var(--gray-600);
+    font-size: 0.88rem;
+    line-height: 1.5;
+  }
+
+  .invest-row .price {
+    font-family: 'Geist Mono', monospace;
+    text-align: right;
+    color: var(--ink);
+    font-size: 1rem;
+    font-weight: 500;
+  }
+
+  .invest-row.featured {
+    background: linear-gradient(90deg, rgba(255, 107, 26, 0.04) 0%, transparent 100%);
+  }
+  .invest-row.featured .item { color: var(--orange); }
+  .invest-row.featured .price { color: var(--orange); font-weight: 600; }
+  .invest-row.featured .idx { color: var(--orange); }
+
+  .invest-foot {
+    margin-top: 56px;
+    text-align: center;
+    color: var(--gray-600);
+    font-size: 1rem;
+    max-width: 70ch;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+  }
+
+  /* ─── Convenios ─── */
+  .conv-flow {
+    display: grid;
+    grid-template-columns: 1fr 100px 1fr;
+    align-items: center;
+    gap: 24px;
+    margin-bottom: 80px;
+  }
+
+  .conv-node {
+    background: var(--white);
+    border: 1px solid var(--gray-100);
+    padding: 48px 40px;
+    border-radius: 28px;
+    text-align: center;
+    transition: transform 0.5s ease;
+  }
+  .conv-node:hover { transform: translateY(-4px); }
+
+  .conv-node .icon-circle {
+    width: 64px; height: 64px;
+    margin: 0 auto 24px;
+    border-radius: 50%;
+    display: grid; place-items: center;
+    background: var(--gray-50);
+    font-size: 1.4rem;
+    font-weight: 500;
+  }
+
+  .conv-node.a .icon-circle { color: var(--blue); }
+  .conv-node.b .icon-circle { background: var(--blue); color: var(--white); }
+
+  .conv-node h4 {
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin-bottom: 10px;
+    letter-spacing: -0.02em;
+  }
+
+  .conv-node p {
+    color: var(--gray-600);
+    font-size: 0.92rem;
+  }
+
+  .conv-arrow {
+    text-align: center;
+  }
+
+  .conv-arrow svg {
+    width: 100%;
+    height: 24px;
+  }
+
+  .conv-arrow .lbl {
+    font-family: 'Geist Mono', monospace;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--orange);
+    margin-bottom: 12px;
+  }
+
+  .conv-benefits {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+
+  .benefit {
+    background: var(--white);
+    padding: 36px 32px;
+    border-radius: 22px;
+    border: 1px solid var(--gray-100);
+  }
+
+  .benefit .num {
+    font-size: 2rem;
+    font-weight: 200;
+    color: var(--blue);
+    line-height: 1;
+    margin-bottom: 14px;
+    letter-spacing: -0.04em;
+  }
+
+  .benefit h5 {
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 8px;
+    letter-spacing: -0.02em;
+  }
+
+  .benefit p {
+    color: var(--gray-600);
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  /* ─── Uniformes ─── */
+  .uniforms {
+    background: var(--gray-50);
+  }
+
+  .uniform-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-bottom: 56px;
+  }
+
+  .uniform-card {
+    background: var(--white);
+    border-radius: 28px;
+    overflow: hidden;
+    transition: transform 0.5s ease;
+  }
+  .uniform-card:hover { transform: translateY(-4px); }
+
+  .uniform-image {
+    aspect-ratio: 4/3;
+    background: linear-gradient(135deg, #E8F0FE 0%, #D6E4FB 100%);
+    position: relative;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+  }
+
+  .uniform-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    transition: transform 0.6s ease;
+  }
+  .uniform-card:hover .uniform-image img { transform: scale(1.02); }
+
+  .uniform-image .placeholder {
+    text-align: center;
+    color: var(--blue-deep);
+    padding: 40px;
+  }
+  .uniform-image .placeholder .ph-title {
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin-bottom: 8px;
+    letter-spacing: -0.02em;
+  }
+  .uniform-image .placeholder .ph-sub {
+    font-family: 'Geist Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    opacity: 0.7;
+  }
+
+  .uniform-info {
+    padding: 32px 36px;
+  }
+
+  .uniform-info .tag {
+    font-family: 'Geist Mono', monospace;
+    text-transform: uppercase;
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    color: var(--orange);
+    margin-bottom: 12px;
+    font-weight: 500;
+  }
+
+  .uniform-info h4 {
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin-bottom: 8px;
+    letter-spacing: -0.02em;
+  }
+
+  .uniform-info p {
+    color: var(--gray-600);
+    font-size: 0.92rem;
+    line-height: 1.5;
+  }
+
+  .uniform-specs {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1px;
+    background: var(--gray-100);
+    border-radius: 28px;
+    overflow: hidden;
+    margin-bottom: 48px;
+  }
+
+  .spec {
+    background: var(--white);
+    padding: 32px 24px;
+    text-align: center;
+  }
+
+  .spec .ico {
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+    color: var(--blue);
+  }
+
+  .spec .lbl {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--ink);
+    margin-bottom: 6px;
+    letter-spacing: -0.01em;
+  }
+
+  .spec .desc {
+    color: var(--gray-400);
+    font-size: 0.78rem;
+    line-height: 1.4;
+  }
+
+  .uniform-budget {
+    background: var(--white);
+    padding: 40px 48px;
+    border-radius: 28px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 32px;
+    align-items: center;
+    border: 1px solid var(--gray-100);
+  }
+
+  .uniform-budget h5 {
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin-bottom: 8px;
+    letter-spacing: -0.02em;
+  }
+
+  .uniform-budget p {
+    color: var(--gray-600);
+    font-size: 0.95rem;
+    max-width: 70ch;
+    line-height: 1.5;
+  }
+
+  .uniform-budget .badge-pill {
+    background: var(--orange);
+    color: var(--white);
+    padding: 14px 22px;
+    border-radius: 100px;
+    font-family: 'Geist Mono', monospace;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    font-size: 0.7rem;
+    font-weight: 500;
+  }
+
+  /* ─── Closing ─── */
+  .closing {
+    text-align: center;
+    background: var(--white);
+    padding: clamp(160px, 24vh, 280px) 24px;
+  }
+
+  .closing-quote {
+    font-size: clamp(2.4rem, 6vw, 5.5rem);
+    font-weight: 300;
+    letter-spacing: -0.04em;
+    line-height: 1.05;
+    max-width: 22ch;
+    margin: 0 auto 80px;
+  }
+
+  .closing-quote .em {
+    color: var(--orange);
+    font-weight: 500;
+  }
+
+  .closing-sig {
+    color: var(--gray-400);
+    font-size: 0.9rem;
+  }
+
+  .closing-sig .name {
+    color: var(--ink);
+    font-weight: 500;
+    margin: 0 8px;
+  }
+
+  /* ─── Footer ─── */
+  footer {
+    background: var(--gray-50);
+    color: var(--gray-400);
+    padding: 32px clamp(24px, 6vw, 80px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Geist Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    border-top: 1px solid var(--gray-100);
+  }
+
+  /* ─── Responsive ─── */
+  @media (max-width: 900px) {
+    section { padding: 80px 20px; }
+    .impact-num-grid { grid-template-columns: 1fr; }
+    .platform-grid { grid-template-columns: 1fr; }
+    .logic-grid { grid-template-columns: 1fr; }
+    .conv-flow { grid-template-columns: 1fr; gap: 16px; }
+    .conv-arrow { transform: rotate(90deg); margin: 16px auto; }
+    .conv-benefits { grid-template-columns: 1fr; }
+    .uniform-grid { grid-template-columns: 1fr; }
+    .uniform-specs { grid-template-columns: repeat(2, 1fr); }
+    .uniform-budget { grid-template-columns: 1fr; text-align: center; }
+    .geo-timeline { grid-template-columns: 1fr; gap: 24px; }
+    .geo-timeline::before { display: none; }
+    .invest-row { grid-template-columns: 32px 1fr; gap: 12px; padding: 16px 20px; }
+    .invest-row .desc, .invest-row .price { grid-column: 2; }
+    .chart-block { padding: 32px 24px; }
+    .bar-row { grid-template-columns: 1fr; gap: 8px; }
+    .bar-value { text-align: left; }
+    footer { flex-direction: column; gap: 12px; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════
+     HERO
+═══════════════════════════════════════════════ -->
+<section class="hero">
+  <div class="container">
+    <div class="eyebrow reveal">Servicios 360 · La Rioja · Abril 2026</div>
+    <h1 class="display hero-title reveal">
+      El trabajo informal,<br>
+      <span class="grad">en cifras visibles.</span>
+    </h1>
+    <p class="hero-sub reveal">
+      Una infraestructura digital para formalizar oficios,
+      generar datos de empleo y transformar la economía social
+      de La Rioja.
+    </p>
+    <div class="hero-meta stagger">
+      <div class="item">
+        <span class="lbl">Destinatario</span>
+        <span class="val">Dip. Nac. Gabi Pedrali</span>
+      </div>
+      <div class="item">
+        <span class="lbl">Provincia foco</span>
+        <span class="val">La Rioja</span>
+      </div>
+      <div class="item">
+        <span class="lbl">Lanzamiento</span>
+        <span class="val">Mayo 2026</span>
+      </div>
+      <div class="item">
+        <span class="lbl">Documento</span>
+        <span class="val">v1.0 · Institucional</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     STATEMENT
+═══════════════════════════════════════════════ -->
+<section class="statement">
+  <div class="container-narrow">
+    <p class="statement-text reveal">
+      No es una <span class="em">app</span>.<br>
+      Es <span class="em">infraestructura social</span><br>
+      con interfaz digital.
+    </p>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     IMPACTO EN NÚMEROS
+═══════════════════════════════════════════════ -->
+<section>
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="eyebrow">01 · Impacto socio-político</div>
+      <h2>El impacto, <span class="em">medido</span>.</h2>
+      <p>Cada cifra documenta un cambio concreto en la economía y la política pública de La Rioja durante los próximos 24 meses.</p>
+    </div>
+
+    <!-- Big number grid -->
+    <div class="impact-num-grid stagger">
+      <div class="num-cell">
+        <div class="big blue"><span class="counter" data-target="500">0</span><span class="unit">+</span></div>
+        <div class="label">Prestadores formalizados</div>
+        <div class="micro">en 12 meses</div>
+      </div>
+      <div class="num-cell">
+        <div class="big orange"><span class="counter" data-target="35">0</span><span class="unit">%</span></div>
+        <div class="label">Mujeres en el padrón activo</div>
+        <div class="micro">vs. 8% en sector informal</div>
+      </div>
+      <div class="num-cell">
+        <div class="big">$<span class="counter" data-target="6.9" data-decimal="1">0</span><span class="unit">M</span></div>
+        <div class="label">ARS de transacciones / mes</div>
+        <div class="micro">a partir del mes 12</div>
+      </div>
+      <div class="num-cell">
+        <div class="big blue"><span class="counter" data-target="40">0</span></div>
+        <div class="label">Jóvenes con primer ingreso registrado</div>
+        <div class="micro">menores de 30 años</div>
+      </div>
+      <div class="num-cell">
+        <div class="big"><span class="counter" data-target="12">0</span></div>
+        <div class="label">Categorías de oficio activas</div>
+        <div class="micro">desde día uno</div>
+      </div>
+      <div class="num-cell">
+        <div class="big orange"><span class="counter" data-target="4">0</span></div>
+        <div class="label">Provincias del NOA en plan de expansión</div>
+        <div class="micro">la rioja → catamarca → sgo → tucumán</div>
+      </div>
+    </div>
+
+    <!-- Line chart: Provider growth -->
+    <div class="chart-block reveal">
+      <div class="chart-header">
+        <div>
+          <div class="chart-title">Proyección de prestadores activos</div>
+          <div class="chart-sub">12 meses · captación curada vía ministerios y referidos</div>
+        </div>
+        <div class="chart-legend">
+          <div><span class="legend-dot" style="background: var(--blue);"></span>Prestadores activos</div>
+        </div>
+      </div>
+
+      <svg class="line-chart" viewBox="0 0 900 320" preserveAspectRatio="none">
+        <defs>
+          <linearGradient id="areaGrad" x1="0" x2="0" y1="0" y2="1">
+            <stop offset="0%" stop-color="#0066CC" stop-opacity="0.18"/>
+            <stop offset="100%" stop-color="#0066CC" stop-opacity="0"/>
+          </linearGradient>
+        </defs>
+
+        <!-- Grid -->
+        <line class="grid-line" x1="60" y1="40" x2="880" y2="40"/>
+        <line class="grid-line" x1="60" y1="100" x2="880" y2="100"/>
+        <line class="grid-line" x1="60" y1="160" x2="880" y2="160"/>
+        <line class="grid-line" x1="60" y1="220" x2="880" y2="220"/>
+        <line class="grid-line" x1="60" y1="280" x2="880" y2="280"/>
+
+        <!-- Y axis labels -->
+        <text class="axis-text" x="40" y="44" text-anchor="end">500</text>
+        <text class="axis-text" x="40" y="104" text-anchor="end">400</text>
+        <text class="axis-text" x="40" y="164" text-anchor="end">300</text>
+        <text class="axis-text" x="40" y="224" text-anchor="end">200</text>
+        <text class="axis-text" x="40" y="284" text-anchor="end">100</text>
+
+        <!-- X axis labels -->
+        <text class="axis-text" x="80" y="305" text-anchor="middle">M1</text>
+        <text class="axis-text" x="200" y="305" text-anchor="middle">M3</text>
+        <text class="axis-text" x="350" y="305" text-anchor="middle">M5</text>
+        <text class="axis-text" x="500" y="305" text-anchor="middle">M7</text>
+        <text class="axis-text" x="650" y="305" text-anchor="middle">M9</text>
+        <text class="axis-text" x="800" y="305" text-anchor="middle">M11</text>
+
+        <!-- Area fill -->
+        <path class="area-path" d="M 80 268 C 140 260, 170 240, 200 220 S 290 168, 350 148 S 470 100, 500 88 S 620 56, 650 48 S 770 32, 880 28 L 880 280 L 80 280 Z"/>
+
+        <!-- Line -->
+        <path class="line-path" d="M 80 268 C 140 260, 170 240, 200 220 S 290 168, 350 148 S 470 100, 500 88 S 620 56, 650 48 S 770 32, 880 28"/>
+
+        <!-- Points -->
+        <circle class="point" cx="80" cy="268" r="5"/>
+        <circle class="point" cx="200" cy="220" r="5"/>
+        <circle class="point" cx="350" cy="148" r="5"/>
+        <circle class="point" cx="500" cy="88" r="5"/>
+        <circle class="point" cx="650" cy="48" r="5"/>
+        <circle class="point" cx="880" cy="28" r="5"/>
+
+        <!-- Point labels -->
+        <text class="point-label" x="80" y="258" text-anchor="middle">30</text>
+        <text class="point-label" x="200" y="210" text-anchor="middle">80</text>
+        <text class="point-label" x="350" y="138" text-anchor="middle">200</text>
+        <text class="point-label" x="500" y="78" text-anchor="middle">320</text>
+        <text class="point-label" x="650" y="38" text-anchor="middle">420</text>
+        <text class="point-label" x="850" y="18" text-anchor="middle">500+</text>
+      </svg>
+    </div>
+
+    <!-- Gender comparison -->
+    <div class="chart-block reveal">
+      <div class="chart-header">
+        <div>
+          <div class="chart-title">Inclusión de mujeres en el oficio</div>
+          <div class="chart-sub">Comparativa entre el sector informal actual y la plataforma</div>
+        </div>
+        <div class="chart-legend">
+          <div><span class="legend-dot" style="background: var(--gray-200);"></span>Sector informal hoy</div>
+          <div><span class="legend-dot" style="background: var(--orange);"></span>Servicios 360 — meta</div>
+        </div>
+      </div>
+
+      <div class="bar-chart-h">
+        <div class="bar-row">
+          <div class="bar-label">Mujeres
+            <span class="sub">Sector informal actual</span>
+          </div>
+          <div class="bar-track">
+            <div class="bar-fill gray" data-width="8"></div>
+          </div>
+          <div class="bar-value">8%</div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-label">Mujeres
+            <span class="sub">Servicios 360 (meta 12m)</span>
+          </div>
+          <div class="bar-track">
+            <div class="bar-fill orange" data-width="35"></div>
+          </div>
+          <div class="bar-value">35%</div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-label">Jefas de hogar
+            <span class="sub">Servicios 360 (meta 12m)</span>
+          </div>
+          <div class="bar-track">
+            <div class="bar-fill blue" data-width="22"></div>
+          </div>
+          <div class="bar-value">22%</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Age distribution -->
+    <div class="chart-block reveal">
+      <div class="chart-header">
+        <div>
+          <div class="chart-title">Distribución etaria del padrón</div>
+          <div class="chart-sub">Proyección al mes 12 — un canal de empleabilidad joven que hoy no existe</div>
+        </div>
+      </div>
+
+      <div class="bar-chart-v">
+        <div class="vbar">
+          <div class="vbar-fill" data-height="65">
+            <div class="vbar-num">25%</div>
+          </div>
+          <div class="vbar-label">&lt; 25 años</div>
+        </div>
+        <div class="vbar">
+          <div class="vbar-fill" data-height="100">
+            <div class="vbar-num">38%</div>
+          </div>
+          <div class="vbar-label">25 — 35</div>
+        </div>
+        <div class="vbar">
+          <div class="vbar-fill" data-height="71">
+            <div class="vbar-num">27%</div>
+          </div>
+          <div class="vbar-label">35 — 50</div>
+        </div>
+        <div class="vbar">
+          <div class="vbar-fill" data-height="26">
+            <div class="vbar-num">10%</div>
+          </div>
+          <div class="vbar-label">&gt; 50 años</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Geographic expansion -->
+    <div class="chart-block reveal">
+      <div class="chart-header">
+        <div>
+          <div class="chart-title">Expansión geográfica · NOA</div>
+          <div class="chart-sub">Ruta de replicación institucional — modelo La Rioja como cabecera</div>
+        </div>
+      </div>
+
+      <div class="geo-timeline">
+        <div class="geo-step active">
+          <div class="dot"></div>
+          <div class="month">Mes 01</div>
+          <div class="place">La Rioja</div>
+          <div class="place-sub">Lanzamiento institucional</div>
+        </div>
+        <div class="geo-step">
+          <div class="dot"></div>
+          <div class="month">Mes 08</div>
+          <div class="place">Catamarca</div>
+          <div class="place-sub">Replicación regional</div>
+        </div>
+        <div class="geo-step">
+          <div class="dot"></div>
+          <div class="month">Mes 14</div>
+          <div class="place">Sgo. del Estero</div>
+          <div class="place-sub">Acuerdo provincial</div>
+        </div>
+        <div class="geo-step">
+          <div class="dot"></div>
+          <div class="month">Mes 20</div>
+          <div class="place">Tucumán</div>
+          <div class="place-sub">Hub NOA consolidado</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     PLATAFORMA — ESTADO ACTUAL
+═══════════════════════════════════════════════ -->
+<section class="platform">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="eyebrow">02 · Estado actual</div>
+      <h2>Lo que <span class="em">ya está</span> en marcha.</h2>
+      <p>Ajustes técnicos completados antes del desembolso operativo del primer mes.</p>
+    </div>
+
+    <div class="platform-grid stagger">
+      <div class="module">
+        <span class="num-corner">01</span>
+        <span class="badge">Activo</span>
+        <h3>Modo mantenimiento institucional</h3>
+        <p>Pantalla controlada de bienvenida mientras se ejecutan los ajustes finales. Branding visible, formulario activo, producto operativo cerrado al público.</p>
+      </div>
+      <div class="module">
+        <span class="num-corner">02</span>
+        <span class="badge">Activo</span>
+        <h3>Formulario de captación de prestadores</h3>
+        <p>Página dedicada para canalizar leads derivados de ministerios, redes y referidos. Cada lead pasa por verificación domiciliaria — la cuenta se crea de forma manual.</p>
+      </div>
+      <div class="module">
+        <span class="num-corner">03</span>
+        <span class="badge">Activo</span>
+        <h3>QR Code institucional para campo</h3>
+        <p>QR único por canal de captación. Permite medir efectividad por barrio, feria, ministerio o comercio aliado. Datos de campo trazables.</p>
+      </div>
+      <div class="module">
+        <span class="num-corner">04</span>
+        <span class="badge">Resuelto</span>
+        <h3>Lógica de contratación refinada</h3>
+        <p>Bifurcación entre servicios estándar (cotización directa) y servicios complejos (visita técnica opcional con costo definido por el prestador).</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     LÓGICA DE CONTRATACIÓN
+═══════════════════════════════════════════════ -->
+<section>
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="eyebrow">03 · Lógica de contratación</div>
+      <h2>Presupuesto justo, <span class="em">visita cuando importa</span>.</h2>
+      <p>Resolvimos el principal punto de fricción del modelo: ni cotización a ciegas, ni visitas innecesarias.</p>
+    </div>
+
+    <div class="logic-grid stagger">
+      <div class="flow-card simple">
+        <div class="flow-tag">Servicios estándar</div>
+        <h4>Sin visita previa.<br>Presupuesto directo.</h4>
+        <p class="desc">El prestador cotiza con la descripción y las fotos que el cliente carga al crear la solicitud.</p>
+        <ul class="flow-list">
+          <li><span class="check">✓</span>Limpieza periódica</li>
+          <li><span class="check">✓</span>Cambio de cerradura</li>
+          <li><span class="check">✓</span>Mantenimiento de jardín</li>
+          <li><span class="check">✓</span>Reparaciones menores con foto</li>
+        </ul>
+      </div>
+      <div class="flow-card complex">
+        <div class="flow-tag">Servicios complejos</div>
+        <h4>Visita previa opcional.<br>Costo definido por el prestador.</h4>
+        <p class="desc">Cuando el diagnóstico requiere presencia técnica, el prestador cobra la visita con un valor que él mismo define.</p>
+        <ul class="flow-list">
+          <li><span class="check">✓</span>Instalaciones eléctricas y de gas</li>
+          <li><span class="check">✓</span>Albañilería con relevamiento</li>
+          <li><span class="check">✓</span>Mudanzas grandes</li>
+          <li><span class="check">✓</span>Aire acondicionado split</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     INVERSIÓN OPERATIVA
+═══════════════════════════════════════════════ -->
+<section class="investment">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="eyebrow">04 · Costos operacionales · primer mes</div>
+      <h2>Estructura <span class="em">sólida</span> desde el día uno.</h2>
+      <p>Cada peso invertido tiene función específica: cumplimiento legal, seguridad, monitoreo 24/7 e inteligencia artificial.</p>
+    </div>
+
+    <div class="invest-headline reveal">
+      <div class="total-num"><span class="currency">USD</span><span class="counter" data-target="450">0</span></div>
+      <p class="sub">Inversión técnica mensual · soporte hasta 50 usuarios/día · escalable hasta 500/día sin reescritura.</p>
+    </div>
+
+    <div class="breakdown stagger">
+      <div class="invest-row featured">
+        <div class="idx">★</div>
+        <div class="item">Capital de IA · Anthropic</div>
+        <div class="desc">Asistente operativo, soporte automatizado, moderación del marketplace y análisis de calidad.</div>
+        <div class="price">USD 250</div>
+      </div>
+      <div class="invest-row">
+        <div class="idx">01</div>
+        <div class="item">Supabase Pro</div>
+        <div class="desc">8 GB DB, 100 GB storage, 100k MAU, backups diarios, RLS empresarial.</div>
+        <div class="price">USD 25</div>
+      </div>
+      <div class="invest-row">
+        <div class="idx">02</div>
+        <div class="item">Vercel Pro · hosting</div>
+        <div class="desc">SLA 99,99%, 1 TB tráfico, despliegues sin downtime, mitigación DDoS.</div>
+        <div class="price">USD 20</div>
+      </div>
+      <div class="invest-row">
+        <div class="idx">03</div>
+        <div class="item">Cloudflare Pro · WAF</div>
+        <div class="desc">Firewall de aplicación, rate limiting, protección anti-bot.</div>
+        <div class="price">USD 20</div>
+      </div>
+      <div class="invest-row">
+        <div class="idx">04</div>
+        <div class="item">Sentry Team</div>
+        <div class="desc">Detección de errores en producción, source maps, performance tracking.</div>
+        <div class="price">USD 26</div>
+      </div>
+      <div class="invest-row">
+        <div class="idx">05</div>
+        <div class="item">Better Stack · uptime 24/7</div>
+        <div class="desc">Probes desde 6 regiones cada 30 segundos, status page, alertas SMS / WhatsApp.</div>
+        <div class="price">USD 24</div>
+      </div>
+      <div class="invest-row">
+        <div class="idx">06</div>
+        <div class="item">Resend Pro · emails</div>
+        <div class="desc">Transaccionales: solicitudes, presupuestos, pagos, calificaciones.</div>
+        <div class="price">USD 20</div>
+      </div>
+      <div class="invest-row">
+        <div class="idx">07</div>
+        <div class="item">WhatsApp Business API</div>
+        <div class="desc">Mensajería oficial Meta — confirmaciones, recordatorios, soporte.</div>
+        <div class="price">USD 35</div>
+      </div>
+      <div class="invest-row">
+        <div class="idx">08</div>
+        <div class="item">Compliance Ley 25.326 · AAIP</div>
+        <div class="desc">Registro de bases de datos, política de privacidad, derecho al olvido.</div>
+        <div class="price">USD 30</div>
+      </div>
+      <div class="invest-row">
+        <div class="idx">09</div>
+        <div class="item">Dominio + reservas</div>
+        <div class="desc">www.servicios360.com.ar, certificados SSL, micro-servicios.</div>
+        <div class="price">USD 20</div>
+      </div>
+    </div>
+
+    <p class="invest-foot reveal">
+      El stack está dimensionado para escalar de 50 a 500 usuarios/día sin reescribir nada — solo activando paquetes superiores. La diferencia entre operar bien desde el día uno y operar improvisadamente equivale a unos USD 180/mes bien invertidos en seguridad y observabilidad.
+    </p>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     CONVENIOS
+═══════════════════════════════════════════════ -->
+<section>
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="eyebrow">05 · Convenios estratégicos</div>
+      <h2>Un ecosistema cerrado de <span class="em">beneficio mutuo</span>.</h2>
+      <p>Articulamos convenios con proveedores de repuestos, materiales eléctricos, sanitarios y herramientas — empresas que ya tienen contacto cotidiano con prestadores en La Rioja.</p>
+    </div>
+
+    <div class="conv-flow stagger">
+      <div class="conv-node a">
+        <div class="icon-circle">A</div>
+        <h4>Empresa aliada</h4>
+        <p>Coloca el cartel de captación de Servicios 360 en su local físico.</p>
+      </div>
+      <div class="conv-arrow">
+        <div class="lbl">Convenio</div>
+        <svg viewBox="0 0 100 24" preserveAspectRatio="xMidYMid meet">
+          <line x1="0" y1="12" x2="92" y2="12" stroke="#FF6B1A" stroke-width="1.5" stroke-dasharray="4 4"/>
+          <polyline points="86,6 96,12 86,18" fill="none" stroke="#FF6B1A" stroke-width="1.5"/>
+        </svg>
+      </div>
+      <div class="conv-node b">
+        <div class="icon-circle">B</div>
+        <h4>Servicios 360</h4>
+        <p>Promociona a la empresa como proveedor preferente con descuento exclusivo para prestadores activos.</p>
+      </div>
+    </div>
+
+    <div class="conv-benefits stagger">
+      <div class="benefit">
+        <div class="num">01</div>
+        <h5>Captación territorial</h5>
+        <p>Llegamos al prestador donde ya está — comprando insumos para su próximo trabajo.</p>
+      </div>
+      <div class="benefit">
+        <div class="num">02</div>
+        <h5>Fidelización del prestador</h5>
+        <p>El descuento exclusivo aumenta el costo de salida. El prestador gana económicamente por estar dentro.</p>
+      </div>
+      <div class="benefit">
+        <div class="num">03</div>
+        <h5>Ingreso para el comercio</h5>
+        <p>Volumen de venta dirigida + asociación con la marca Servicios 360 como aliado oficial.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     UNIFORMES
+═══════════════════════════════════════════════ -->
+<section class="uniforms">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="eyebrow">06 · Identidad de campo</div>
+      <h2>Cuando un prestador toca tu puerta, <span class="em">la confianza ya entró</span>.</h2>
+      <p>El uniforme convierte cada visita a un domicilio en un acto verificable. Diseño funcional, identidad reconocible, profesionalización visible.</p>
+    </div>
+
+    <div class="uniform-grid stagger">
+      <div class="uniform-card">
+        <div class="uniform-image">
+          <img src="assets/buzo-femenino.jpg" alt="Modelo femenino del uniforme Servicios 360" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+          <div class="placeholder" style="display:none;">
+            <div class="ph-title">Modelo Femenino</div>
+            <div class="ph-sub">4 vistas · talles 36–50</div>
+          </div>
+        </div>
+        <div class="uniform-info">
+          <div class="tag">Línea femenina</div>
+          <h4>Diseño anatómico, talles 36 al 50</h4>
+          <p>Corte ergonómico, capucha ajustable, paneles laterales naranja para alta visibilidad. Logo bordado al pecho y espalda.</p>
+        </div>
+      </div>
+      <div class="uniform-card">
+        <div class="uniform-image">
+          <img src="assets/buzo-masculino.jpg" alt="Modelo masculino del uniforme Servicios 360" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+          <div class="placeholder" style="display:none;">
+            <div class="ph-title">Modelo Masculino</div>
+            <div class="ph-sub">4 vistas · talles S–XXL</div>
+          </div>
+        </div>
+        <div class="uniform-info">
+          <div class="tag">Línea masculina</div>
+          <h4>Diseño robusto, talles S al XXL</h4>
+          <p>Tejido tecnológico de alta durabilidad, bolsillo canguro, puños y cintura elastizados. Visibilidad total con paneles naranja.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="uniform-specs stagger">
+      <div class="spec">
+        <div class="ico">☀</div>
+        <div class="lbl">Protección UV</div>
+        <div class="desc">Bloqueo de radiación solar</div>
+      </div>
+      <div class="spec">
+        <div class="ico">≡</div>
+        <div class="lbl">Tejido tecnológico</div>
+        <div class="desc">Liviano, transpirable, secado rápido</div>
+      </div>
+      <div class="spec">
+        <div class="ico">◐</div>
+        <div class="lbl">Confort térmico</div>
+        <div class="desc">Apto para jornadas largas</div>
+      </div>
+      <div class="spec">
+        <div class="ico">◆</div>
+        <div class="lbl">Durabilidad</div>
+        <div class="desc">Alta resistencia para uso diario</div>
+      </div>
+      <div class="spec">
+        <div class="ico">★</div>
+        <div class="lbl">Identidad</div>
+        <div class="desc">Comunica organización y excelencia</div>
+      </div>
+    </div>
+
+    <div class="uniform-budget reveal">
+      <div>
+        <h5>Presupuesto en relevamiento</h5>
+        <p>Estamos cotizando con confeccionistas de Buenos Aires y La Rioja capital. Producción inicial proyectada: 30 unidades (15 femeninas + 15 masculinas). Valores definitivos en la próxima revisión.</p>
+      </div>
+      <div class="badge-pill">En relevamiento · Mayo 2026</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     CIERRE
+═══════════════════════════════════════════════ -->
+<section class="closing">
+  <div class="container-narrow">
+    <h2 class="closing-quote reveal">
+      No buscamos <span class="em">autorización</span>.<br>
+      Buscamos <span class="em">articulación</span>.
+    </h2>
+    <div class="closing-sig reveal">
+      Presentado por <span class="name">Guilherme</span> · CEO Servicios 360 · La Rioja, abril 2026
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div>www.servicios360.com.ar</div>
+  <div>Documento institucional · v1.0</div>
+</footer>
+
+<script>
+  // ─── Reveal observer ───
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('in');
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+
+  document.querySelectorAll('.reveal, .stagger').forEach(el => io.observe(el));
+
+  // Hero immediately
+  setTimeout(() => {
+    document.querySelectorAll('.hero .reveal, .hero .stagger').forEach(el => el.classList.add('in'));
+  }, 100);
+
+  // ─── Number counters ───
+  const counterIO = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        const el = e.target;
+        const target = parseFloat(el.dataset.target);
+        const decimals = parseInt(el.dataset.decimal || '0');
+        let start = performance.now();
+        const duration = 1600;
+
+        const tick = (now) => {
+          const elapsed = now - start;
+          const progress = Math.min(elapsed / duration, 1);
+          const eased = 1 - Math.pow(1 - progress, 3);
+          const current = target * eased;
+          el.textContent = decimals ? current.toFixed(decimals) : Math.round(current);
+          if (progress < 1) requestAnimationFrame(tick);
+          else el.textContent = decimals ? target.toFixed(decimals) : target;
+        };
+        requestAnimationFrame(tick);
+        counterIO.unobserve(el);
+      }
+    });
+  }, { threshold: 0.4 });
+
+  document.querySelectorAll('.counter').forEach(c => counterIO.observe(c));
+
+  // ─── Bar chart fills (horizontal) ───
+  const barIO = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.style.width = e.target.dataset.width + '%';
+        barIO.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.4 });
+
+  document.querySelectorAll('.bar-fill').forEach(b => barIO.observe(b));
+
+  // ─── Vertical bars ───
+  const vbarIO = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        const target = parseInt(e.target.dataset.height);
+        e.target.style.height = (target * 2.4) + 'px';
+        vbarIO.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.4 });
+
+  document.querySelectorAll('.vbar-fill').forEach(b => vbarIO.observe(b));
+
+  // ─── Geo timeline animation ───
+  const geoIO = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        const steps = e.target.querySelectorAll('.geo-step');
+        steps.forEach((s, i) => {
+          setTimeout(() => s.classList.add('active'), 400 + i * 280);
+        });
+        geoIO.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.5 });
+
+  document.querySelectorAll('.geo-timeline').forEach(t => geoIO.observe(t));
+</script>
+
+</body>
+</html>
