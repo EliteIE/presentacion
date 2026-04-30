@@ -1036,7 +1036,7 @@
 
   .invest-row {
     display: grid;
-    grid-template-columns: 60px 1.4fr 1.6fr 120px;
+    grid-template-columns: 60px 1.2fr 2fr;
     gap: 24px;
     padding: 24px 32px;
     align-items: center;
@@ -1695,7 +1695,7 @@
       <div class="chart-header">
         <div>
           <div class="chart-title">Expansión territorial dentro de La Rioja</div>
-          <div class="chart-sub">Capital primero, luego el interior — cobertura progresiva del universo urbano riojano (~285k hab)</div>
+          <div class="chart-sub">Cobertura progresiva urbano de La Rioja</div>
         </div>
       </div>
 
@@ -1703,32 +1703,27 @@
         <div class="lr-phase">
           <div class="phase-tag">Fase 1 · M1–M6</div>
           <div class="phase-place">La Rioja Capital</div>
-          <div class="phase-pop">~ 180.000 hab</div>
-          <div class="phase-desc">Núcleo de lanzamiento institucional. Toda la operación inicial, onboarding presencial y articulación con ministerios provinciales.</div>
+          <div class="phase-desc">Núcleo de lanzamiento institucional. Toda la operación inicial, onboarding presencial y articulación con <strong>ministerios provinciales, gremios y universidad</strong>.</div>
         </div>
         <div class="lr-phase">
           <div class="phase-tag">Fase 2 · M6–M10</div>
           <div class="phase-place">Chilecito</div>
-          <div class="phase-pop">~ 50.000 hab</div>
           <div class="phase-desc">Segunda ciudad de la provincia y hub del oeste riojano. Replicación del modelo curado con prestadores locales.</div>
         </div>
         <div class="lr-phase">
           <div class="phase-tag">Fase 3 · M10–M14</div>
           <div class="phase-place">Aimogasta + Chamical</div>
-          <div class="phase-pop">~ 30.000 hab</div>
           <div class="phase-desc">Corredores norte (Arauco) y sur (Llanos). Apertura de oficios bajo demanda regional.</div>
         </div>
         <div class="lr-phase">
           <div class="phase-tag">Fase 4 · M14–M20</div>
           <div class="phase-place">Chepes + Villa Unión + Famatina</div>
-          <div class="phase-pop">~ 25.000 hab</div>
           <div class="phase-desc">Cobertura del interior profundo. Cierre de huella provincial completa antes de exportar el modelo al NOA.</div>
         </div>
       </div>
 
       <div class="lr-summary">
-        <div class="lr-total">Cobertura proyectada al mes 20: <strong>~ 285.000 habitantes</strong> · 18 departamentos riojanos</div>
-        <div class="lr-total" style="color: var(--orange);">Capital → Interior · sin saltear etapas</div>
+        <div class="lr-total" style="color: var(--orange); margin: 0 auto;">Capital → Interior · sin saltear etapas</div>
       </div>
     </div>
 
@@ -1869,6 +1864,14 @@
         </ul>
       </div>
     </div>
+
+    <div class="uniform-budget reveal" style="margin-top: 56px; background: var(--gray-50); border-color: var(--gray-100);">
+      <div>
+        <h5 style="color: var(--ink);">Presupuesto de impresión a definir</h5>
+        <p style="color: var(--gray-600);">Estamos cotizando con imprentas locales de La Rioja capital para producción inicial de carteles en formato A3 plastificado y A4 adhesivo. Cantidades estimadas: 50 unidades para distribución en gremios, ministerios y comercios aliados. Valores definitivos en la próxima revisión.</p>
+      </div>
+      <div class="badge-pill" style="background: var(--blue);">A definir · Mayo 2026</div>
+    </div>
   </div>
 </section>
 
@@ -1922,8 +1925,7 @@
     </div>
 
     <div class="invest-headline reveal">
-      <div class="total-num"><span class="currency">USD</span><span class="counter" data-target="450">0</span></div>
-      <p class="sub">Inversión técnica mensual · soporte hasta 50 usuarios/día · escalable hasta 500/día sin reescritura.</p>
+      <p class="sub" style="font-size: 1.25rem; max-width: 60ch;">Inversión técnica mensual · soporte hasta 50 usuarios/día · escalable hasta 500/día sin reescritura. <strong style="color: var(--ink);">Valores a discutir en reunión presencial.</strong></p>
     </div>
 
     <div class="breakdown stagger">
@@ -1931,66 +1933,64 @@
         <div class="idx">★</div>
         <div class="item">Capital de IA · Anthropic</div>
         <div class="desc">Asistente operativo, soporte automatizado, moderación del marketplace y análisis de calidad.</div>
-        <div class="price">USD 250</div>
       </div>
       <div class="invest-row">
         <div class="idx">01</div>
         <div class="item">Supabase Pro</div>
         <div class="desc">8 GB DB, 100 GB storage, 100k MAU, backups diarios, RLS empresarial.</div>
-        <div class="price">USD 25</div>
       </div>
       <div class="invest-row">
         <div class="idx">02</div>
         <div class="item">Vercel Pro · hosting</div>
         <div class="desc">SLA 99,99%, 1 TB tráfico, despliegues sin downtime, mitigación DDoS.</div>
-        <div class="price">USD 20</div>
       </div>
       <div class="invest-row">
         <div class="idx">03</div>
         <div class="item">Cloudflare Pro · WAF</div>
         <div class="desc">Firewall de aplicación, rate limiting, protección anti-bot.</div>
-        <div class="price">USD 20</div>
       </div>
       <div class="invest-row">
         <div class="idx">04</div>
         <div class="item">Sentry Team</div>
         <div class="desc">Detección de errores en producción, source maps, performance tracking.</div>
-        <div class="price">USD 26</div>
       </div>
       <div class="invest-row">
         <div class="idx">05</div>
         <div class="item">Better Stack · uptime 24/7</div>
         <div class="desc">Probes desde 6 regiones cada 30 segundos, status page, alertas SMS / WhatsApp.</div>
-        <div class="price">USD 24</div>
       </div>
       <div class="invest-row">
         <div class="idx">06</div>
         <div class="item">Resend Pro · emails</div>
         <div class="desc">Transaccionales: solicitudes, presupuestos, pagos, calificaciones.</div>
-        <div class="price">USD 20</div>
       </div>
       <div class="invest-row">
         <div class="idx">07</div>
         <div class="item">WhatsApp Business API</div>
         <div class="desc">Mensajería oficial Meta — confirmaciones, recordatorios, soporte.</div>
-        <div class="price">USD 35</div>
       </div>
       <div class="invest-row">
         <div class="idx">08</div>
         <div class="item">Compliance Ley 25.326 · AAIP</div>
         <div class="desc">Registro de bases de datos, política de privacidad, derecho al olvido.</div>
-        <div class="price">USD 30</div>
       </div>
       <div class="invest-row">
         <div class="idx">09</div>
         <div class="item">Dominio + reservas</div>
         <div class="desc">www.servicios360.com.ar, certificados SSL, micro-servicios.</div>
-        <div class="price">USD 20</div>
       </div>
     </div>
 
+    <div style="margin-top: 32px; padding: 32px 40px; background: var(--white); border-radius: 22px; border: 1px solid var(--gray-100); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;" class="reveal">
+      <div>
+        <div style="font-family: 'Geist Mono', monospace; text-transform: uppercase; font-size: 0.7rem; letter-spacing: 0.18em; color: var(--gray-400); margin-bottom: 6px;">Stack completo</div>
+        <div style="font-size: 1.05rem; color: var(--ink); font-weight: 500;">IA + infraestructura + compliance + soporte 24/7</div>
+      </div>
+      <div style="font-family: 'Geist Mono', monospace; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.16em; color: var(--orange); padding: 12px 20px; border: 1px solid var(--orange); border-radius: 100px; font-weight: 500;">Inversión a discutir en persona</div>
+    </div>
+
     <p class="invest-foot reveal">
-      El stack está dimensionado para escalar de 50 a 500 usuarios/día sin reescribir nada — solo activando paquetes superiores. La diferencia entre operar bien desde el día uno y operar improvisadamente equivale a unos USD 180/mes bien invertidos en seguridad y observabilidad.
+      El stack está dimensionado para escalar de 50 a 500 usuarios/día sin reescribir nada — solo activando paquetes superiores. Cada componente cumple una función técnica específica: cumplimiento legal, seguridad de datos personales, observabilidad y continuidad operativa.
     </p>
   </div>
 </section>
